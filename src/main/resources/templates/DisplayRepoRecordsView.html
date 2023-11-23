@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset= "UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<p><h2>Phones datatable</h2></p><br>
+<table class="table table-striped">
+    <tr><th>Manufacturer</th><th>Model</th><th>Publish_Year</th></tr>
+    <tr th:each="row: ${phones}">
+        <td th:text="${row.manufacturer}">MANUFACTURER</td>
+        <td th:text="${row.modelName}">MODEL_NAME</td>
+        <td th:text="${row.publishYear}">PUBLISH_YEAR</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add phone</title>
+</head>
+<body>
+<form action="http://localhost:8080/add">
+    <table>
+        <tr>
+            <td> Set manufacturer </td>
+            <td><input name="manufacturer"></td>
+        </tr>
+        <tr>
+            <td> Set model </td>
+            <td> <input name="model" > </td>
+        </tr>
+        <tr>
+            <td> Set publishYear </td>
+            <td><input name="publishYear" ></td>
+        </tr>
+    </table>
+    <p><input type="submit" value="Add"/></p>
+    <br><br>
+    Last post data <br><hr>
+    <span th:text=${phone}></span><br>
+</form>
+</body>
+</html>
